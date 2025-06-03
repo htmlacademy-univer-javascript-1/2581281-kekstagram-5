@@ -1,5 +1,5 @@
 function compareLength(string, maxLength){
-  return string.length() <= maxLength;
+  return string.length <= maxLength;
 }
 
 function isPalindrome(string){
@@ -10,3 +10,5 @@ function isPalindrome(string){
   }
   return string === reverseString;
 }
+console.log(isPalindrome('abcba'));
+console.log(compareLength('abc',4));
