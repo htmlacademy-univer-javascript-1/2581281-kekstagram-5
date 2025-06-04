@@ -10,6 +10,7 @@ import { createObjects } from './create-Objects.js';
 
 const generatedObjects = Array.from({length:TOTAL_OBJECTS}, createObjects);
 generatedObjects.at(0);
-//console.log(generatedObjects);
+// eslint-disable-next-line no-console
+console.log(generatedObjects);
 
 
