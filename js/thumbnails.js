@@ -1,3 +1,9 @@
+import {openBigPicture} from './fullScreenViewer.js';
+// Генерация примеров переехала в main.js
+// import {getRandom} from './util.js';
+// import {COMMENTS_RANGE} from './data.js';
+// import {createComment} from './create-Comment.js';
+
 const createPhotoElement = (photoData) => {
   // КРЧ функция, чтобы создавать DOM-элементы фотографий в разметке.
   // Она будет использована в дальнейшем в функции для отрисовки их в блок .pictures
@@ -23,6 +29,12 @@ const createPhotoElement = (photoData) => {
   likesElement.textContent = photoData.likes;
   commentsElement.textContent = photoData.comments.length;
 
+  imgElement.addEventListener('click', (evt) => {
+    //console.log(evt);
+    evt.preventDefault();
+    openBigPicture(photoData);
+  });
+  //console.log(pictureElement);
   return pictureElement;
 };
 
@@ -38,14 +50,18 @@ const renderPhotos = (photos) => {
   picturesContainer.appendChild(fragment);
 };
 // Проверим
+/*
 const tempData = [
   {
     url: 'img/upload-default-image.jpg',
     description: 'Пример описания',
     likes: 9 ** 9,
-    comments: ['wtf', 'ayaya', 'wadaw', 'awaaa']
+    comments: Array.from({length: getRandom(COMMENTS_RANGE)}, createComment)
   },
 
 ];
+*/
 
-renderPhotos(tempData);
+export {renderPhotos};
+
+
