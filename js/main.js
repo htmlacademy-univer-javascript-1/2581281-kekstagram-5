@@ -7,10 +7,10 @@
 
 import {TOTAL_OBJECTS} from './data.js';
 import {createObjects} from './create-Objects.js';
+import {renderPhotos} from './thumbnails.js';
 
 const generatedObjects = Array.from({length: TOTAL_OBJECTS}, createObjects);
 generatedObjects.at(0);
 // eslint-disable-next-line no-console
 console.log(generatedObjects);
-
-
+renderPhotos(generatedObjects);
