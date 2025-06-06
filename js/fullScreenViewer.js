@@ -76,11 +76,11 @@ const closeBigPicture = () => {
 };
 
 // Удаление обработчиков событий
-const removeEventListeners = () => {
+function removeEventListeners() {
   document.removeEventListener('keydown', onEscKeydown);
   bigPictureCloseButton.removeEventListener('click', closeBigPicture);
   showNextCommentsButton.removeEventListener('click', showNextComments);
-};
+}
 
 // Добавление обработчиков событий
 const addEventListeners = () => {
@@ -90,11 +90,11 @@ const addEventListeners = () => {
 };
 
 // Обработчик нажатия Esc
-const onEscKeydown = (evt) => {
+function onEscKeydown(evt) {
   if (evt.key === 'Escape') {
     closeBigPicture();
   }
-};
+}
 
 // Функция открытия полноэкранного просмотра
 const openBigPicture = (photoData) => {
@@ -125,4 +125,4 @@ const openBigPicture = (photoData) => {
   addEventListeners();
 };
 
-export { openBigPicture };
+export {openBigPicture};
