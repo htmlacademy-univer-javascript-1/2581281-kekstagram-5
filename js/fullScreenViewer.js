@@ -13,7 +13,7 @@ const body = document.querySelector('body');
 // Функция открытия полноэкранного просмотра
 const openBigPicture = (photoData) => {
   // Убираем класс hidden и добавляем модальный класс к body
-  console.log('openBigPicture', photoData);
+  //console.log('openBigPicture', photoData);
 
   bigPictureElement.classList.remove('hidden');
   body.classList.add('modal-open');
@@ -55,7 +55,7 @@ const openBigPicture = (photoData) => {
 
   // Добавление обработчиков событий
   document.addEventListener('keydown', (evt) => {
-    console.log('keydown', evt);
+    //console.log('keydown', evt);
     if (evt.key === 'Escape') {
       bigPictureElement.classList.add('hidden');
       body.classList.remove('modal-open');
