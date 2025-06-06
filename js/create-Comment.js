@@ -8,7 +8,7 @@ import {
 import {idGenerator, getRandom} from './util.js';
 
 const commentIdGenerator = idGenerator();
-export const createComment = function(){
+export const createComment = function () {
   return {
     id: commentIdGenerator(),
     avatar: `img/avatar-${getRandom(AVATARS_RANGE)}.svg`,

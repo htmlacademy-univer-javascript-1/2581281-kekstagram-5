@@ -5,7 +5,7 @@ import {
   COMMENTS_RANGE,
 } from './data.js';
 //console.log('____');
-import { idGenerator, getRandom } from './util.js';
+import {idGenerator, getRandom} from './util.js';
 import {createComment} from './create-Comment.js';
 
 const ojectsIdGenerator = idGenerator();
